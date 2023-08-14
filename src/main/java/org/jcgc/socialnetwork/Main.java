@@ -1,4 +1,4 @@
-package org.example;
+package org.jcgc.socialnetwork;
 
 import java.sql.Connection;
 
