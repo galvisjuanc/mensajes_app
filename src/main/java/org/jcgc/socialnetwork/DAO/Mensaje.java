@@ -1,15 +1,15 @@
 package org.jcgc.socialnetwork.DAO;
 
-public class Mensajes {
+public class Mensaje {
     int id;
     String mensaje;
     String autorMensaje;
     String fechaMensaje;
 
-    public Mensajes(){
+    public Mensaje(){
     }
 
-    public Mensajes(String mensaje, String autorMensaje, String fechaMensaje) {
+    public Mensaje(String mensaje, String autorMensaje, String fechaMensaje) {
         this.mensaje = mensaje;
         this.autorMensaje = autorMensaje;
         this.fechaMensaje = fechaMensaje;
