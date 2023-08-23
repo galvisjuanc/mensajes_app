@@ -15,8 +15,8 @@ public class Main {
             System.out.println("Aplicacion de Mensajes");
             System.out.println("1. Crear Mensajes");
             System.out.println("2. Listar Mensajes");
-            System.out.println("3. Editar Mensajes");
-            System.out.println("4. Eliminar Mensajes");
+            System.out.println("3. Borrar Mensajes");
+            System.out.println("4. Editar Mensajes");
             System.out.println("5. Salir");
             System.out.println("\nOpcion a elegir --> ");
 
@@ -25,8 +25,8 @@ public class Main {
             switch (opcion) {
                 case 1 -> MensajeService.crearMensaje();
                 case 2 -> MensajeService.listarMensaje();
-                case 3 -> MensajeService.editarMensaje();
-                case 4 -> MensajeService.borrarMensaje();
+                case 3 -> MensajeService.borrarMensaje();
+                case 4 -> MensajeService.editarMensaje();
                 case 5 -> System.out.println("Ha llegado al final del programa. Gracias!");
                 default -> System.out.println("Ha digitado un número erroneo. Intentelo de nuevo :)");
 
