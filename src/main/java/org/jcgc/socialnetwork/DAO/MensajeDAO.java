@@ -68,13 +68,30 @@ public class MensajeDAO {
                 System.out.println(ex);
                 System.out.println("El mensaje no pudo ser borrado");
             }
-
         }catch (SQLException e) {
             System.out.println(e);
         }
     }
 
     public static void actualizarMensajeDB(Mensaje mensaje){
+        Conexion db_connect = new Conexion();
+
+        try(Connection conexion = db_connect.getConnection()) {
+            PreparedStatement ps = null;
+            try{
+                String query = "UPDATE mensajes SET mensaje = ? WHERE id_mensaje = ?";
+                ps = conexion.prepareStatement(query);
+                ps.setString(1, mensaje.getMensaje());
+                ps.setInt(2, mensaje.getId());
+                ps.executeUpdate();
+                System.out.println("El mensaje ha sido actualizado correctamente.");
+            }catch(SQLException ex){
+                System.out.println(ex);
+                System.out.println("El mensaje no pudo ser actualizado. Error: {}." + ex);
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
 
     }
 }
